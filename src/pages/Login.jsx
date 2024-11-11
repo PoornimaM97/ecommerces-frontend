@@ -40,6 +40,16 @@ function Login() {
         <div>
           <h2>Register</h2>
           <form onSubmit={handleSubmit}>
+          <div>
+              <label>Name:</label>
+              <input
+                type="text"
+                name="name"
+                value={userData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
             <div>
               <label>Username:</label>
               <input
