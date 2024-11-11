@@ -2,6 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'; // Adjust the path as needed
 import ProductsListing from './components/ProductsListing';
+import Login from './pages/Login';
 
 
 // import Home from './pages/Home';
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<Login />} /> */}
         </Routes>
         <Routes>
+        <Route path="/login" element={<Login/>} /> 
         <Route path="/products" element={<ProductsListing />} />
         </Routes>
       </div>

@@ -26,17 +26,55 @@ function Login() {
         e.preventDefault();
         register(userData).then((response)=>{
             console.log(response.data)
+            setMessage('Registration successful!');
             navigator('/products');
         }).catch(error=>{
+            setMessage('Registration failed. Please try again.');
             console.error(error)
         });
         
     }
 
  
-  return (
-    <div>Login</div>
-  )
+    return (
+        <div>
+          <h2>Register</h2>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label>Username:</label>
+              <input
+                type="text"
+                name="username"
+                value={userData.username}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>Email:</label>
+              <input
+                type="email"
+                name="email"
+                value={userData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label>Password:</label>
+              <input
+                type="password"
+                name="password"
+                value={userData.password}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit">Register</button>
+          </form>
+          {message && <p>{message}</p>}
+        </div>
+      );
 }
 
 export default Login
