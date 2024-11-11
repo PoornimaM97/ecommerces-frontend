@@ -17,6 +17,7 @@ function ProductListing() {
       } catch (err) {
         setError('Failed to fetch products');
         setLoading(false);
+        console.log(err);
       }
     };
 
