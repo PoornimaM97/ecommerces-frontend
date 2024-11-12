@@ -8,7 +8,7 @@ import { FaShoppingCart, FaUser } from 'react-icons/fa';
 const Navbars = () => {
   
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg bg-light">
       <div className="navbar-brand">
         <Link to="/">E-Shop</Link>
       </div>
@@ -22,13 +22,13 @@ const Navbars = () => {
           <Link to="/products" className='nav-link' >Products <span className="sr-only">(current)</span></Link>
         </li>
         <li>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart" className='nav-link'>Cart <span className="sr-only"></span></Link>
         </li>
         <li>
-          <Link to="/profile">My Account</Link>
+          <Link to="/profile" className='nav-link'>My Account <span className="sr-only"></span></Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/login" className='nav-link'>Login <span className="sr-only"></span></Link>
         </li>
       </ul>
       </div>
