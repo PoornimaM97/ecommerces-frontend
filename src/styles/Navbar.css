@@ -1,30 +1,62 @@
+/* General navbar styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: rgb(255, 255, 255);
+}
+
+/* Navbar links */
+.navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+/* Link hover effect */
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Logo styling */
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Responsive menu button */
+/* .navbar .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+} */
+
+/* Flex container for the links */
+.navbar .nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
     background-color: #333;
-    padding: 10px 20px;
   }
-  
-  .navbar-logo a {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
+
+  .navbar .menu-toggle {
+    display: block;
   }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .navbar-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .navbar-links li a:hover {
-    color: #f0a500;
-  }
-  
+}
+
+/* Active state for responsive menu */
+.navbar.active .nav-links {
+  display: flex;
+}

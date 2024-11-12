@@ -1,6 +1,6 @@
 //import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar'; // Adjust the path as needed
+import Navbars from './components/Navbars'; // Adjust the path as needed
 import ProductsListing from './components/ProductsListing';
 import Login from './pages/Login';
 
@@ -15,14 +15,14 @@ function App() {
   return (
     <Router>
       <div>
-        <Navbar /> {/* Navbar will be rendered on every page */}
-        <Routes>
-          {/* <Route path="/" element={<Home />} />
+        <Navbars /> {/* Navbar will be rendered on every page */}
+        {/* <Routes> 
+          <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} /> */}
-        </Routes>
+          <Route path="/login" element={<Login />} /> 
+        </Routes>*/}
         <Routes>
         <Route path="/login" element={<Login/>} /> 
         <Route path="/products" element={<ProductsListing />} />
