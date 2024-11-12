@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav } from '../bootstrap/dist/css/bootstrap.css';
+
 
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 
@@ -36,4 +36,4 @@ const Navbars = () => {
   );
 };
 
-export default Navbar;
+export default Navbars;
