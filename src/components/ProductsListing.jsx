@@ -5,7 +5,7 @@ import '../styles/ProductsListing.css'; // Optional CSS for styling
 function ProductListing() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [errors, setErrors] = useState(null);
 
   useEffect(() => {
     // Replace with your API endpoint
@@ -15,7 +15,7 @@ function ProductListing() {
         setProducts(response.data);
         setLoading(false);
       } catch (err) {
-        setError('Failed to fetch products');
+        setErrors('Failed to fetch products');
         setLoading(false);
         console.log(err);
       }
@@ -25,7 +25,7 @@ function ProductListing() {
   }, []);
 
   if (loading) return <p>Loading products...</p>;
-  if (error) return <p>{error}</p>;
+  if (errors) return <p>{errors}</p>;
 
   return (
     <div className="product-listing">
