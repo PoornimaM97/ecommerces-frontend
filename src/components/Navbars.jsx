@@ -27,7 +27,7 @@ const Navbars = () => {
         <li>
           <Link to="/profile" className='nav-link'>My Account <span className="sr-only"></span></Link>
         </li>
-        <li>
+        <li> 
           <Link to="/login" className='nav-link'>Login <span className="sr-only"></span></Link>
         </li>
       </ul>

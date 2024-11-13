@@ -6,4 +6,4 @@ export const addProducts = (productsData) => axios.post(REST_API_BASE_PRODUCTS_U
 
 export const listProducts = () => axios.get(REST_API_BASE_PRODUCTS_URL);
 
-export const listProductsById = (id) => axios.get(REST_API_BASE_PRODUCTS_URL + `${id}`)
+export const listProductsById = (id) => axios.get(REST_API_BASE_PRODUCTS_URL + `${id}`);
