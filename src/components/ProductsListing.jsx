@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // If you're using axios for API requests
-import '../styles/ProductsListing.css'; // Optional CSS for styling
+//import '../styles/ProductsListing.css'; // Optional CSS for styling
 
 function ProductListing() {
   const [products, setProducts] = useState([]);

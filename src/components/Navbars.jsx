@@ -8,7 +8,9 @@ import { FaShoppingCart, FaUser } from 'react-icons/fa';
 const Navbars = () => {
   
   return (  
+    <div>
     <nav className="navbar navbar-expand-lg bg-light">
+      <div className='container'>
       <div className="navbar-brand">
         <Link to="/">E-Shop</Link>
       </div>
@@ -18,7 +20,7 @@ const Navbars = () => {
       {/* <div className="menu-toggle" onClick={toggleMenu()}>☰</div> */}
       <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
-        <li className='"nav-item active"'>
+        <li className="nav-item active">
           <Link to="/products" className='nav-link' >Products <span className="sr-only">(current)</span></Link>
         </li>
         <li>
@@ -32,7 +34,9 @@ const Navbars = () => {
         </li>
       </ul>
       </div>
+      </div>
     </nav>
+    </div>
   );
 };
 
