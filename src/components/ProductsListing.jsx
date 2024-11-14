@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // If you're using axios for API requests
+import { listProducts } from '../services/ProductsServices';
 //import '../styles/ProductsListing.css'; // Optional CSS for styling
 
 function ProductListing() {
@@ -11,10 +12,12 @@ function ProductListing() {
     // Replace with your API endpoint
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('/api/products');
+        listProducts().then((response)=>{
         setProducts(response.data);
         setLoading(false);
-      } catch (err) {
+        }).catch(error=>{
+          console.log(error)
+        })} catch (err) {
         setErrors('Failed to fetch products');
         setLoading(false);
         console.log(err);
