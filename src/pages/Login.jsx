@@ -24,6 +24,8 @@ function Login() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log(e);
+        console.log(userData.name);
         register(userData).then((response)=>{
             console.log(response.data)
             setMessage('Registration successful!');
