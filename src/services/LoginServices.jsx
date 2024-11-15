@@ -9,3 +9,5 @@ export const adminRegister = (userData) => axios.post(REST_API_BASE_USER_URL + "
 export const login = (loginData) => axios.post(REST_API_BASE_USER_URL + "/login");
 
 export const getUserById = (userId) => axios.get(REST_API_BASE_USER_URL + `${userId}`);
+
+export const getUserByProfile = (userDetails) => axios.get(REST_API_BASE_USER_URL + "/profile");
